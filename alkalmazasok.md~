@@ -1,0 +1,11 @@
+# Alkalmazások
+
+A következő alkalmazásokról érdemes tudni, melyről mindegyikről részletesebben is írok.
+
+A [GPSBabel](http://www.gpsbabel.org) egy parancssori eszköz különböző formátumú GPS állományok közti konvertáláshoz. Több száz formátumot ismer, és már kinőtte magát annyira, hogy mindenféle manipulációkat is el lehet végezni ezen állományokon. Viszont térkép állományokat nem kezel. Közvetlenül is képes kezelni a számítógéphez csatlakoztatott GPS eszközt. Mindig ezzel érdemes kezdeni az ismerkedést.
+
+Az [mkgmap](http://www.mkgmap.org.uk/) egy Java alkalmazás, mely képes az Open Street Map .osm formátumát a Garmin által ehető .img formátummá konvertálni. Nekünk ezzel remélhetőleg nem lesz dolgunk, mert hozzá tudunk férni a már mások által legenerált .img állományokhoz. Érdekességként megemlítendő, hogy a Turistautak.hu is ezzel konvertál .img formátumba.
+
+
+
+
