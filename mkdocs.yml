@@ -1,0 +1,15 @@
+site_name: Geocaching Linuxon
+site_description: Geocaching Linuxon
+site_author: Viczián István
+theme: readthedocs
+repo_url: https://github.com/vicziani/geolinuxhu
+theme_dir: 'custom_theme'
+pages:
+- ['index.md', 'Bevezetés']
+- ['adatforrasok.md', 'Adatforrások']
+- ['alkalmazasok.md', 'Alkalmazások']
+- ['gpsbabel.md', 'GPSBabel']
+- ['sendmap.md', 'sendmap']
+- ['qlandkartegt.md', 'QLandKarteGT']
+- ['gpsmap60.md', 'GPSmap 60']
+- ['forrasok.md', 'Források']
