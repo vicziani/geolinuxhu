@@ -4,7 +4,7 @@ Ez az oldal azoknak készült, akik geocache-elnek, és mellette Linuxot haszná
 
 Az oldal nem csak geocache-ereknek lehet hasznos, hanem túrázóknak, vagy bárkinek, aki Garmin GPS-t használ, vagy egyszerűen csak turistatérképeket akar kezelni Linux operációs rendszeren. Remélem az oldal Geocaching.hu és a Turistautak.hu oldalak felhasználói részére is tartalmaznak hasznos információkat.
 
-Persze van lehetőség arra is, hogy a MapSource-t Dropbox virtuális gépen Windows-on futtassuk, vagy Wine-vel Windows környezetet emuláljunk, de én inkább a natív megoldásokat szerettem volna megkeresni.
+Persze van lehetőség arra is, hogy a MapSource-t VirtualBox virtuális gépen Windows-on futtassuk, vagy Wine-vel Windows környezetet emuláljunk, de én inkább a natív megoldásokat szerettem volna megkeresni.
 
 Az oldal létrehozója [Viczián István](http://about.jtechlog.hu/), bármi kérdéssel kapcsolatban elérsz a viczian.istvan címen a gmailen.
 
@@ -12,7 +12,7 @@ Az oldal létrehozója [Viczián István](http://about.jtechlog.hu/), bármi ké
 
 ## Segíts nekem
 
-Az oldal [MkDocs](http://www.mkdocs.org/) eszközzel készült, forrása elérhető a [GitHubon](https://github.com/vicziani/geo-linux-hu). Így amennyiben segítenél az oldalak szerkesztésében, dobj egy Pull Requestet.
+Az oldal [MkDocs](http://www.mkdocs.org/) eszközzel készült, forrása elérhető a [GitHubon](https://github.com/vicziani/geolinuxhu). Így amennyiben segítenél az oldalak szerkesztésében, dobj egy Pull Requestet.
 
 Ha nem akarsz ennyire belefolyni a technológiai részletekbe, dobj egy e-mailt.
 
