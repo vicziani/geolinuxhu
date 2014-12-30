@@ -4,6 +4,8 @@ Ez az oldal azoknak készült, akik geocache-elnek, és mellette Linuxot haszná
 
 Az oldal nem csak geocache-ereknek lehet hasznos, hanem túrázóknak, vagy bárkinek, aki Garmin GPS-t használ, vagy egyszerűen csak turistatérképeket akar kezelni Linux operációs rendszeren. Remélem az oldal Geocaching.hu és a Turistautak.hu oldalak felhasználói részére is tartalmaznak hasznos információkat.
 
+Persze van lehetőség arra is, hogy a MapSource-t Dropbox virtuális gépen Windows-on futtassuk, vagy Wine-vel Windows környezetet emuláljunk, de én inkább a natív megoldásokat szerettem volna megkeresni.
+
 Az oldal létrehozója [Viczián István](http://about.jtechlog.hu/), bármi kérdéssel kapcsolatban elérsz a viczian.istvan címen a gmailen.
 
 Én egy GPSMAP 60 GPS készülékkel rendelkezem, és Ubuntu 14.04 Linuxot futtatok, így a példák is ezen a környezeten lettek tesztelve, de bízom benne, hogy más eszközzel és más disztribúción is hasonlóképp fognak működni.
