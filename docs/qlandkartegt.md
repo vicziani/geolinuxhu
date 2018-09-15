@@ -37,9 +37,13 @@ A QLandkarte GT képes vektoros és raszteres térképeket is kezelni, valamint 
 	Terrain map
 	http://mt.google.com/vt/lyrs=t&x=%2&y=%3&z=%1 
 
-Amennyiben a Turistautak.hu oldalról letöltött térképet szeretnénk használni, töltsük le a megfelelő [oldalról](http://turistautak.hu/garmin.php) a .zip állományt, és csomagoljuk ki. Több .img állományt és egy .tdb állományt tartalmaz. A File/Load map menüpontban válasszuk ki először a .tdb állományt, majd a vele megegyező nevő .img állományt. Ekkor a térkép megjelenik a Vector fülön.
+Amennyiben a Turistautak.hu oldalról letöltött térképet szeretnénk használni, töltsük le a megfelelő [oldalról](http://turistautak.hu/garmin.php) a .zip állományt, és csomagoljuk ki. Több .img állományt és egy .tdb állományt tartalmaz. A File/Load map menüpontban válasszuk ki először a .tdb állományt, majd a vele megegyező nevű .img állományt. Ekkor a térkép megjelenik a Vector fülön.
 
-A Turistautak.hu térképei alapesetben nem jelennek meg, csak ha nagyon ránagyítunk. Ezt úgy kell kiküszöbölni, hogy alul a részletességet növelni kell, a comboboxban a Detail 5 értéket kell kiválasztani.
+A Turistautak.hu térképei alapesetben nem jelennek meg, csak ha nagyon ránagyítunk. Ezt úgy kell kiküszöbölni, hogy alul a részletességet növelni kell, a comboboxban a Detail 5 értéket kell kiválasztani. Alul van egy Night kapcsoló is, ezzel egy más színsémát tudunk alkalmazni.
+
+Ugyanígy kell tenni az OMP térképekkel is. Ennek annyi az érdekessége, hogy három stílust is tartalmaz, melyek között a térkép alatt, a részletesség mellett megjelenő legördülő menüben lehet választani. A turistaútvonalak színezése csak bizonyos nagyítás mellett látható.
+
+Az alsó menüben lehet a POI labels kapcsolóval a POI-k nevének megjelenítését be- és kikapcsolni, valamint a Grid kapcsolóval a térképen a rácsot bekapcsolni (mely a mellette lévő gombbal konfigurálható).
 
 Azt is meg lehet csinálni, hogy alul egy streamelt raszteres térkép jelenik meg, és felette a vektoros. Ehhez először dupla klikk a streamelt térképen, majd a vektoros térképen az első oszlopban (M azaz Mode oszlop) kell egy klikket nyomni (use a single click to activate map as overlay).
 

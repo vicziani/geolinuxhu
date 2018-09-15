@@ -10,6 +10,8 @@ pages:
 - ['alkalmazasok.md', 'Alkalmazások']
 - ['gpsbabel.md', 'GPSBabel']
 - ['sendmap.md', 'sendmap']
+- ['mkgmap.md', 'mkgmap']
 - ['qlandkartegt.md', 'QLandKarteGT']
 - ['gpsmap60.md', 'GPSmap 60']
+- ['gpsmap62stc.md', 'GPSmap 62stc']
 - ['forrasok.md', 'Források']

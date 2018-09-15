@@ -2,7 +2,7 @@
 
 Én egy [GPSMAP 60](http://support.garmin.com/support/sw/supportPage/display?locale=en_US&topicIDs={e0585080-030b-11dc-e9ab-000000000000}&topicIDs=Mapping%20Handhelds&topicIDs={09d30780-03d3-11dc-786a-000000000000}&topicIDs={fb3cac00-03df-11dc-786a-000000000000}) készülékkel rendelkezem, és ezzel kapcsolatos specifikus információk találhatóak itt.
 
-Az eszköz nem támogatja a USB Mass Storage Mode-ot.
+Az eszköz nem támogatja az USB Mass Storage módot.
 
 ## Térképkezelés
 

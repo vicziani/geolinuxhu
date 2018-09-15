@@ -4,11 +4,13 @@ Ez az oldal azoknak készült, akik geocache-elnek, és mellette Linuxot haszná
 
 Az oldal nem csak geocache-ereknek lehet hasznos, hanem túrázóknak, vagy bárkinek, aki Garmin GPS-t használ, vagy egyszerűen csak turistatérképeket akar kezelni Linux operációs rendszeren. Remélem az oldal Geocaching.hu és a Turistautak.hu oldalak felhasználói részére is tartalmaznak hasznos információkat.
 
-Persze van lehetőség arra is, hogy a MapSource-t VirtualBox virtuális gépen Windows-on futtassuk, vagy Wine-vel Windows környezetet emuláljunk, de én inkább a natív megoldásokat szerettem volna megkeresni.
+Persze van lehetőség arra is, hogy a MapSource-t VirtualBox virtuális gépen Windowson futtassuk, vagy Wine-nal Windows környezetet emuláljunk, de én inkább a natív megoldásokat szerettem volna megkeresni.
 
-Az oldal létrehozója [Viczián István](http://about.jtechlog.hu/), bármi kérdéssel kapcsolatban elérsz a viczian.istvan címen a gmailen.
+Az oldal létrehozója Viczián István, bármi kérdéssel kapcsolatban elérsz a viczian.istvan címen a gmailen.
 
 Én egy GPSMAP 60 GPS készülékkel rendelkezem, és Ubuntu 14.04 Linuxot futtatok, így a példák is ezen a környezeten lettek tesztelve, de bízom benne, hogy más eszközzel és más disztribúción is hasonlóképp fognak működni.
+
+Az oldal módosításai nyomon jövethetőek a GitHubon a [commitoknál](https://github.com/vicziani/geolinuxhu/commits/master).
 
 ## Segíts nekem
 
@@ -30,7 +32,13 @@ Bármilyen pontosítás, technikai leírás, más GPS-szel vagy disztribúcióva
 
 Két fájlformátum típussal találkozhatunk, az egyik, melyben a térképek adatai kerülnek letárolásra, a másik a GPS által rögzített, vagy a GPS számára hasznos adatok, mint az útpontok, útvonalak és nyomvonalak.
 
-A Garmin készülékek térképformátuma az .img kiterjesztésű állomány. Bár a formátum nem nyílt, [visszafejtették](http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/IMG_File_Format) és rengeteg szoftver képes kezelni. Ezért én is ezt javaslom, hiszen a [turistautak.hu](http://www.turistautak.hu/garmin.php) oldalról ebben a formátumban is le lehet letölteni a térképeket, és a később részletezett QLandkarte GT szoftver is képes kezelni. Az .img állományok mellett szerepelni szokott egy .tdb állomány is, mely összefoglaló információkat tartalmaz az .img fájlokról, és a QLandkarte GT is csak ennek megléte esetén tudja betölteni őket.
+A Garmin készülékek térképformátuma az .img kiterjesztésű állomány. Bár a formátum nem nyílt, [visszafejtették](http://wiki.openstreetmap.org/wiki/OSM_Map_On_Garmin/IMG_File_Format) és rengeteg szoftver képes kezelni. Ezért én is ezt javaslom, hiszen ezt nem kell konvertálgatni, a legtöbb oldalról ebben a formátumban is le lehet letölteni a térképeket, és a később részletezett QLandkarte GT szoftver is képes kezelni. Az .img állományok mellett szerepelni szokott egy .tdb állomány is, mely összefoglaló információkat tartalmaz az .img fájlokról, és a QLandkarte GT is csak ennek megléte esetén tudja betölteni őket.
+
+A .img állománynak van egy újabb verziója is, az un. NT formátum. Ezt sajnos még nem sikerült visszafejteni, ezért a nyílt forráskódú alkalmazások nem tudják kezelni. A QLandkarte GT is a következő hibaüzenetet adja:
+
+	QLandkarte GT is unable to read map files with NT format
+
+Ide tartozik még a .typ állomány is, mely különféle stílus információkat ír le. A térképeken különböző objektumok jelennek meg, mint vonalak, poligonok, POI-k, ezek vizuális megjelenítését írja le a .typ fájl, úgymint színük, formájuk, különböző dekorációk.
 
 A GPS adatok kezelésére a [GPX, vagyis GPS Exchange Format](http://en.wikipedia.org/wiki/GPS_Exchange_Format) formátumot javaslom, ugyanis ez egy nyílt [kvázi szabvány](http://www.topografix.com/gpx.asp), mely XML alapú, és a legtöbb szoftver tudja kezelni. A geocaching.hu oldalon is többek között ebben a formátumban is le lehet tölteni a ládák adatait. Érdemes megjegyezni, hogy a Garmin a MapSource programban a saját .gdb formátumát preferálja, bár képes kezelni sok más formátumot is.
 
@@ -63,3 +71,19 @@ Majd csatlakoztassuk le, majd újra fel az eszközt, és nézzük meg, hogy a l�
 A harmadik blokkban megjelent w betű jelzi, hogy immár mindenki számára írható is az eszköz.
 
 Részletesebb információkat az OpenStreetMap [wiki oldalán](http://wiki.openstreetmap.org/wiki/USB_Garmin_on_GNU/Linux) találsz.
+
+## Mass storage mód
+
+Bizonyos eszközök támogatják az un. mass storage módot, ami azt jelenti, hogy a Garmin GPS mint egy új meghajtó jelenik meg, mint egy külső merevlemez, pendrive vagy memóriakártya. Ennek használatával még egyszerűbben tudunk adatot fel- vagy letölteni, hiszen csak fájlokat kell másolnunk. Az USB kábel csatlakoztatása után nálam automatikusan létrejött a `/media/<felhasználónév>/GARMIN` könyvtár, melyben megtaláltam a szükséges állományokat.
+
+A következő könyvtárak és állományok lehetnek érdekesek itt:
+
+* `Garmin`: ebben a könyvtárban jelennek meg a számunkra szükséges állományok
+* `Garmin/gmapbmap.img`: alaptérkép
+* `Garmin/gmapprom.img`: előre feltöltött térkép
+* `Garmin/gmapsupp.img`: külön feltöltött térkép, a MapSource ezen a néven tölt fel térképeket
+* `Garmin/gmaptz.img`: időzóna térképadatok
+* `Garmin/GPX`: ebbe a könyvtárba tölthetünk fel saját pontokat, útvonalakat
+* `Garmin/GPX/current/Current.gpx`: a GPS ide rögzíti a nyomvonalunkat, valamint az eszközön felvett útpontokat
+
+Nagyon vigyázzunk ezekre az állományokra, akár maradandó károsodást is okozhatunk.
